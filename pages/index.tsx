@@ -13,10 +13,10 @@ import { shimmer, toBase64 } from "../utils/image_data";
 // export const config = {
 //   unstable_runtimeJS: false,
 // };
-export const config = {
-  unstable_runtimeJS: false,
-  unstable_JsPreload: false
-};
+// export const config = {
+//   unstable_runtimeJS: false,
+//   unstable_JsPreload: false
+// };
 const Home: NextPage = () => {
   return (
     <>
