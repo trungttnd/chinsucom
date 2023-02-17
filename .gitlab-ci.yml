@@ -1,0 +1,25 @@
+variables:
+  IMAGE_NAME: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+  DEV_URL: ""
+  STAGING_URL: ""
+  RELEASE_URL: ""
+  PRODUCTION_URL: ""
+#
+stages:
+  - scan
+  - prepare
+  - build
+  - deploy
+
+before_script:
+  - echo build and deploy by Gitlab CI/CD
+
+include: 
+# Develop
+  - '.devops/0-cicd/develop-branches/.gitlab-ci.yml'
+# Sandbox
+  - '.devops/0-cicd/sandbox-branches/.gitlab-ci.yml'
+# Hotfix
+  - '.devops/0-cicd/hotfix-branches/.gitlab-ci.yml'
+# Production
+  - '.devops/0-cicd/production-branches/.gitlab-ci.yml'
