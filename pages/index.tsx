@@ -10,9 +10,9 @@ import NoneSSRWrapper from "../components/NoneSSRWrapper";
 import images from "../utils/const";
 import { shimmer, toBase64 } from "../utils/image_data";
 
-export const config = {
-  unstable_runtimeJS: false,
-};
+// export const config = {
+//   unstable_runtimeJS: false,
+// };
 
 const Home: NextPage = () => {
   return (
