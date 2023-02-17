@@ -14,6 +14,7 @@ import { shimmer, toBase64 } from "../utils/image_data";
 //   unstable_runtimeJS: false,
 // };
 export const config = {
+  unstable_runtimeJS: false,
   unstable_JsPreload: false
 };
 const Home: NextPage = () => {
